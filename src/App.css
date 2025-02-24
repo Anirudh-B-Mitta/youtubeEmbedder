@@ -1,38 +1,108 @@
-.App {
+/* Dark Theme */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.video-player {
+  width: 80%;
+  height: 400px;
+  margin: 0 auto 30px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.video-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.placeholder {
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.video-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.video-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+
+.video-item {
+  cursor: pointer;
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.video-item img {
+  width: 200px;
+  height: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.video-item p {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Tooltip */
+.tooltip {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  z-index: 1000;
+  pointer-events: none; /* Ensure the tooltip doesn't interfere with hover */
+}
+
+/* Video Title */
+.video-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px; /* Match the width of the thumbnail */
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #ccc;
+  cursor: pointer;
 }
